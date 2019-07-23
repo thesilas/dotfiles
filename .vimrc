@@ -15,7 +15,7 @@ if has("vms")
 else
   set backup            " keep a backup file
 endif
-set history=500         " keep 50 lines of command line history
+set history=700         " keep 50 lines of command line history
 set ruler               " show the cursor position all the time
 set showcmd             " display incomplete commands
 set incsearch           " do incremental searching
@@ -162,3 +162,24 @@ set winfixheight " keep window height when windows are opened/closed
 
 " Mark lines > 79 chars
 autocmd FileType ruby match ErrorMsg /\%>79v.\+/
+
+" use system clipboard
+set clipboard=unnamedplus
+
+" Set 7 lines to the cursor - when moving vertically using j/k
+set so=7
+
+" Height of the command bar
+set cmdheight=2
+
+" Show matching brackets when text indicator is over them
+set showmatch
+
+" How many tenths of a second to blink when matching brackets
+set mat=2
+
+" Automatically scroll the text
+set sidescroll=10
+
+" Highlight color for visual mode
+highlight Visual cterm=reverse ctermbg=NONE
