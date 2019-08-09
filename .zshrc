@@ -106,3 +106,5 @@ alias vim=vimx
 
 #vi mode
 bindkey -v
+#backspace fix
+bindkey "^?" backward-delete-char
