@@ -183,3 +183,6 @@ set sidescroll=10
 
 " Highlight color for visual mode
 highlight Visual cterm=reverse ctermbg=NONE
+
+" Keep clipboard content after exit
+autocmd VimLeave * call system("echo -n $'" . escape(getreg(), "'") . "' | xsel -ib")
