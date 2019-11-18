@@ -8,6 +8,12 @@ curl -Lo install.sh https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 sh install.sh --unattended
 rm install.sh
 
+echo "[*] Installing xclip"
+sudo dnf install xclip
+
+echo "[*] Installing zsh"
+sudo dnf install zsh
+
 # make zsh default shell
 echo "Set zsh as default shell"
 echo "" >> $HOME/.bashrc
@@ -15,10 +21,6 @@ echo "# Use zsh as default shell" >> $HOME/.bashrc
 echo "if [ -t 1 ]; then" >> $HOME/.bashrc
 echo "exec zsh" >> $HOME/.bashrc
 echo "fi" >> $HOME/.bashrc
-
-# setup should install xclip
-echo "[*] Installing xclip"
-sudo dnf install xclip
 
 # setup dotfiles and backup existing ones
 echo "[*] getting the dotfiles"
