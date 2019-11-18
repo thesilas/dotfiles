@@ -2,17 +2,17 @@
 # dotfiles installation script
 
 # installation of prerequisites
-# oh my zsh 
-echo "[*] installing oh-my-zsh."
-curl -Lo install.sh https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh
-sh install.sh --unattended
-rm install.sh
-
 echo "[*] Installing xclip"
 sudo dnf install xclip
 
 echo "[*] Installing zsh"
 sudo dnf install zsh
+
+# oh my zsh 
+echo "[*] installing oh-my-zsh."
+curl -Lo install.sh https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh
+sh install.sh --unattended
+rm install.sh
 
 # make zsh default shell
 echo "Set zsh as default shell"
