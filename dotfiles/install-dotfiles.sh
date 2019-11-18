@@ -8,6 +8,9 @@ sudo dnf install xclip
 echo "[*] Installing zsh"
 sudo dnf install zsh
 
+echo "[*] Installing vimx"
+sudo dnf install vim-X11
+
 # oh my zsh 
 echo "[*] installing oh-my-zsh."
 curl -Lo install.sh https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh
