@@ -2,6 +2,15 @@
 # dotfiles installation script
 
 # installation of prerequisites
+echo "[*] Installing xclip"
+sudo dnf install xclip
+
+echo "[*] Installing zsh"
+sudo dnf install zsh
+
+echo "[*] Installing vimx"
+sudo dnf install vim-X11
+
 # oh my zsh 
 echo "[*] installing oh-my-zsh."
 curl -Lo install.sh https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh
@@ -16,10 +25,6 @@ echo "if [ -t 1 ]; then" >> $HOME/.bashrc
 echo "exec zsh" >> $HOME/.bashrc
 echo "fi" >> $HOME/.bashrc
 
-# setup should install xclip
-echo "[*] Installing xclip"
-sudo dnf install xclip
-
 # setup dotfiles and backup existing ones
 echo "[*] getting the dotfiles"
 git clone --bare https://github.com/thesilas/dotfiles $HOME/dotfiles
@@ -32,7 +37,7 @@ if [ $? = 0 ]; then
 	  echo "[*] Checked out config.";
 	    else
 		        echo "[*] Backing up pre-existing dot files.";
-			    config checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | xargs -I{} mv {} .config-backup/{}
+			    config checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | xargs -I {} mv $HOME/{} .config-backup/{}
 fi;
 config checkout
 config config status.showUntrackedFiles no
