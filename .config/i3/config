@@ -216,3 +216,6 @@ exec_always --no-startup-id xbindkeys -f ~/.xbindkeysrc
 
 # launch rofi
 bindsym $mod+d exec rofi -show run
+
+# run rescue time
+exec_always --no-startup-id rescuetime
