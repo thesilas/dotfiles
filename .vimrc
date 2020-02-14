@@ -186,3 +186,6 @@ highlight Visual cterm=reverse ctermbg=NONE
 
 " Keep clipboard content after exit
 autocmd VimLeave * call system("echo -n $'" . escape(getreg(), "'") . "' | xsel -ib")
+
+" Colorscheme
+colorscheme darkblue
