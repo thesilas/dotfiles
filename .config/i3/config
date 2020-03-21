@@ -208,13 +208,19 @@ exec_always --no-startup-id setxkbmap -option caps:escape
 exec_always --no-startup-id feh --bg-scale $HOME/Pictures/wallpaper.jpg
 
 # configure the display settings when connnected to the external monitor (default)
-exec_always --no-startup-id xrandr --output HDMI-2 --primary --mode 1920x1200 --pos 2560x0 --rotate normal --output HDMI-1 --off --output DP-1 --off --output eDP-1 --mode 1280x720 --pos 0x0 --rotate normal --output DP-2 --off
+# one full HD screen
+# exec_always --no-startup-id xrandr --output HDMI-2 --primary --mode 1920x1200 --pos 2560x0 --rotate normal --output HDMI-1 --off --output DP-1 --off --output eDP-1 --mode 1280x720 --pos 0x0 --rotate normal --output DP-2 --off
+# two external 2K screens
+exec_always --no-startup-id xrandr --output eDP-1 --mode 1280x720 --pos 0x0 --rotate normal --output DP-1 --off --output HDMI-1 --off --output DP-2 --off --output HDMI-2 --off --output DP-2-1 --primary --mode 2560x1440 --pos 2560x0 --rotate normal --output DP-2-2 --mode 2560x1440 --pos 5120x0 --rotate normal --output DP-2-3 --off
 
 # manual set the display settings for notebook usage only
 bindsym $mod+shift+n exec --no-startup-id xrandr --output HDMI-2 --off --output HDMI-1 --off --output DP-1 --off --output eDP-1 --primary --mode 1600x900 --pos 0x0 --rotate normal --output DP-2 --off
 
 # manual display settings for external monitor setup
-bindsym $mod+shift+m exec --no-startup-id xrandr --output HDMI-2 --primary --mode 1920x1200 --pos 2560x0 --rotate normal --output HDMI-1 --off --output DP-1 --off --output eDP-1 --mode 1280x720 --pos 0x0 --rotate normal --output DP-2 --off
+# one full HD screen
+# two external 2K screens
+# bindsym $mod+shift+m exec --no-startup-id xrandr --output HDMI-2 --primary --mode 1920x1200 --pos 2560x0 --rotate normal --output HDMI-1 --off --output DP-1 --off --output eDP-1 --mode 1280x720 --pos 0x0 --rotate normal --output DP-2 --off
+bindsym $mod+shift+m exec --no-startup-id xrandr --output eDP-1 --mode 1280x720 --pos 0x0 --rotate normal --output DP-1 --off --output HDMI-1 --off --output DP-2 --off --output HDMI-2 --off --output DP-2-1 --primary --mode 2560x1440 --pos 2560x0 --rotate normal --output DP-2-2 --mode 2560x1440 --pos 5120x0 --rotate normal --output DP-2-3 --off
 
 # xbindkeys
 exec_always --no-startup-id xbindkeys -f ~/.xbindkeysrc
