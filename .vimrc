@@ -189,3 +189,4 @@ autocmd VimLeave * call system("echo -n $'" . escape(getreg(), "'") . "' | xsel 
 
 " Colorscheme
 colorscheme darkblue
+

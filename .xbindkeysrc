@@ -82,8 +82,8 @@
 "flameshot gui"
    Print
 
-# Firefox
-"firefox"
+# Brave
+"brave-browser"
    Mod4 + Super_L + Shift + f
 
 # Nautilus
