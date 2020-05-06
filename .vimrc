@@ -90,7 +90,7 @@ set title
 " show line numbers
 set number
 
-" show relative numbers
+" Also show relative numbers
 set relativenumber
 
 " ignore case in search unless searching uppercase letters
