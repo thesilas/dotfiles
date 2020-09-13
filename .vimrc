@@ -201,3 +201,6 @@ function! SearchMultiLine(bang, ...)
   endif
 endfunction
 command! -bang -nargs=* -complete=tag S call SearchMultiLine(<bang>0, <f-args>)|normal! /<C-R>/<CR>
+
+" Quick save
+noremap <Leader>s :update<CR>
