@@ -8,7 +8,6 @@
 # i3 config file (v4)
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
-
 set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -195,17 +194,14 @@ bar {
 }
 
 # change default workspace numbering
-workspace 1 output HDMI-2
-workspace 10 output eDP-1
+workspace 1 output DP-1-2
+# workspace 10 output eDP-1
 
 # move window to other screen
 bindsym $mod+p move workspace to output right
 
 # map escape to the capslock key
 exec_always --no-startup-id setxkbmap -option caps:escape
-
-# set the background image
-exec_always --no-startup-id feh --bg-scale $HOME/Pictures/wallpaper.jpg
 
 # configure the display settings when connnected to the external monitor (default)
 # Dell 38" scrren
@@ -235,8 +231,8 @@ exec_always --no-startup-id xbindkeys -f ~/.xbindkeysrc
 # launch rofi
 bindsym $mod+d exec rofi -show run
 
-# run rescue time
-exec_always --no-startup-id rescuetime
-
 # enable numlock on when i3 starts
-exec = numlockx on
+exec --no-startup-id = numlockx on
+
+# set the background image
+# exec_always --no-startup-id feh --no-fehbg --bg-scale $HOME/Pictures/wallpaper.jpg &
