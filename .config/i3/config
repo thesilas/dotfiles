@@ -220,6 +220,10 @@ bindsym $mod+shift+n exec --no-startup-id xrandr --output HDMI-2 --off --output 
 # 38" curved only
 bindsym $mod+shift+m exec --no-startup-id xrandr --output eDP-1 --off --output DP-1 --off --output HDMI-1 --off --output DP-2 --off --output HDMI-2 --off --output DP-1-1 --off --output DP-1-2 --primary --mode 3840x1600 --pos 2560x0 --rotate normal --output DP-1-3 --off
 
+# external screen picture in picture
+# 38" with BIT notebook
+bindsym $mod+shift+p exec --no-startup-id xrandr --output eDP-1 --off --output DP-1 --primary --mode 1920x1600 --pos 1600x0 --rotate normal --output HDMI-1 --off --output DP-2 --off --output HDMI-2 --off
+
 # one full HD screen
 # bindsym $mod+shift+m exec --no-startup-id xrandr --output HDMI-2 --primary --mode 1920x1200 --pos 2560x0 --rotate normal --output HDMI-1 --off --output DP-1 --off --output eDP-1 --mode 1280x720 --pos 0x0 --rotate normal --output DP-2 --off
 # two external 2K screens
@@ -236,3 +240,6 @@ exec --no-startup-id = numlockx on
 
 # set the background image
 # exec_always --no-startup-id feh --no-fehbg --bg-scale $HOME/Pictures/wallpaper.jpg &
+
+# run kDrive
+exec_always --no-startup-id /opt/kDrive/kDrive;
