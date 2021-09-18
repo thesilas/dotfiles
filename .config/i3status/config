@@ -11,15 +11,38 @@ general {
         interval = 5
 }
 
-order += "ipv6"
+order += "cpu_usage"
+# order += "load"
+# order += "memory"
+# order += "ipv6"
 order += "disk /home/"
-order += "run_watch DHCP"
+#order += "run_watch DHCP"
 order += "wireless _first_"
 order += "ethernet _first_"
 order += "battery all"
-# order += "memory"
-order += "load"
 order += "tztime local"
+
+cpu_usage {
+	format = "CPU: %cpu0"
+}
+
+load {
+        format = "CPU: %1min"
+}
+
+# memory {
+#         format = "%used"
+#         threshold_degraded = "10%"
+#         format_degraded = "MEMORY: %free"
+# }
+
+disk "/home/" {
+        format = "Disk: %avail"
+}
+
+run_watch DHCP {
+        pidfile = "/var/run/dhclient*.pid"
+}
 
 wireless _first_ {
         format_up = "W: (%quality at %essid) %ip"
@@ -47,21 +70,3 @@ battery all {
 tztime local {
         format = "%Y-%m-%d %H:%M:%S"
 }
-
-load {
-        format = "%1min"
-}
-
-disk "/home/" {
-        format = "%avail"
-}
-
-run_watch DHCP {
-        pidfile = "/var/run/dhclient*.pid"
-}
-
-# memory {
-#         format = "%used"
-#         threshold_degraded = "10%"
-#         format_degraded = "MEMORY: %free"
-# }
