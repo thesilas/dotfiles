@@ -28,5 +28,3 @@ $HOME in git via whitelisting. No symlinks, scripts, or dependencies, just git.
 ~:$ git remote update
 ~:$ git checkout -t origin/master [-f]
 ```
-
-test
