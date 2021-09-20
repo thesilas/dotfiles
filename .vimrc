@@ -215,9 +215,13 @@ call plug#begin('~/.vim/plugged')
 " Plugin outside ~/.vim/plugged with post-update hook
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'itchyny/lightline.vim'
 
 " Initialize plugin system
 call plug#end()
 
 " Easy invoke fzf
 map ; :Files<CR>
+
+" Fix lightline statusbar
+set laststatus=2
