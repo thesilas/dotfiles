@@ -12,3 +12,5 @@ fi
 if [ -t 1 ]; then
 exec fish
 fi
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
