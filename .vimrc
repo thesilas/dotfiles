@@ -205,13 +205,12 @@ command! -bang -nargs=* -complete=tag S call SearchMultiLine(<bang>0, <f-args>)|
 " Quick save
 noremap <Leader>s :update<CR>
 
-" Plugins
+" Own customizations begin here
+
 " Specify a directory for plugins
 " - For Neovim: stdpath('data') . '/plugged'
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
-
-" Make sure you use single quotes
 
 " Plugin outside ~/.vim/plugged with post-update hook
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -221,5 +220,8 @@ Plug 'itchyny/lightline.vim'
 " Initialize plugin system
 call plug#end()
 
-" Lightline configuration
+" Easy invoke fzf
+map ; :Files<CR>
+
+" Fix lightline statusbar
 set laststatus=2
