@@ -226,7 +226,7 @@ map ; :Files<CR>
 " Fix lightline statusbar
 set laststatus=2
 
-“ WSL Copy & Paste
+" WSL Copy & Paste
 if system('uname -r') =~ "Microsoft"
     augroup Yank
         autocmd!
