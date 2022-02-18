@@ -205,7 +205,8 @@ exec_always --no-startup-id setxkbmap -option caps:escape
 
 # configure the display settings when connnected to the external monitor (default)
 # Dell 38" scrren
-exec_always --no-startup-id xrandr --output eDP-1 --off --output DP-1 --off --output HDMI-1 --off --output DP-2 --off --output HDMI-2 --off --output DP-1-1 --off --output DP-1-2 --primary --mode 3840x1600 --pos 2560x0 --rotate normal --output DP-1-3 --off
+# exec_always --no-startup-id xrandr --output eDP-1 --off --output DP-1 --off --output HDMI-1 --off --output DP-2 --off --output HDMI-2 --off --output DP-1-1 --off --output DP-1-2 --primary --mode 3840x1600 --pos 2560x0 --rotate normal --output DP-1-3 --off
+exec_always --no-startup-id autorandr --change
 
 # two external 2K screens
 # exec_always --no-startup-id xrandr --output eDP-1 --mode 1280x720 --pos 0x0 --rotate normal --output DP-1 --off --output HDMI-1 --off --output DP-2 --off --output HDMI-2 --off --output DP-2-1 --primary --mode 2560x1440 --pos 2560x0 --rotate normal --output DP-2-2 --mode 2560x1440 --pos 5120x0 --rotate normal --output DP-2-3 --off
@@ -239,7 +240,7 @@ bindsym $mod+d exec rofi -show run
 exec --no-startup-id = numlockx on
 
 # set the background image
-# exec_always --no-startup-id feh --no-fehbg --bg-scale $HOME/Pictures/wallpaper.jpg &
+exec_always --no-startup-id feh --no-fehbg --bg-scale $HOME/Pictures/Wallpaper/Wallpaper.jpg &
 
 # run kDrive
 exec_always --no-startup-id /opt/kDrive/kDrive;
