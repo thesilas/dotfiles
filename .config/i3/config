@@ -234,7 +234,7 @@ bindsym $mod+shift+p exec --no-startup-id xrandr --output eDP-1 --off --output D
 exec_always --no-startup-id xbindkeys -f ~/.xbindkeysrc
 
 # launch rofi
-bindsym $mod+d exec rofi -show run
+bindsym $mod+d exec rofi -show drun
 
 # enable numlock on when i3 starts
 exec --no-startup-id = numlockx on
