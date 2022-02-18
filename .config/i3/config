@@ -240,7 +240,7 @@ bindsym $mod+d exec rofi -show drun
 exec --no-startup-id = numlockx on
 
 # set the background image
-exec_always --no-startup-id feh --no-fehbg --bg-scale $HOME/Pictures/Wallpaper/Wallpaper.jpg &
+exec_always --no-startup-id feh --no-fehbg --bg-center $HOME/Pictures/Wallpaper/Wallpaper.jpg &
 
 # run kDrive
 exec_always --no-startup-id /opt/kDrive/kDrive;
